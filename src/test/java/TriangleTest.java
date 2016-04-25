@@ -33,4 +33,9 @@ public class TriangleTest {
     Triangle testTriangle = new Triangle(2, 2, 2);
     assertEquals(true, testTriangle.isEquilateral());
   }
+  @Test
+  public void isIsosceles_whenExectlyTwoSidesAreEqual_true() {
+    Triangle testTriangle = new Triangle(2, 2, 3);
+    assertEquals(true, testTriangle.isIsosceles());
+  }
 }
