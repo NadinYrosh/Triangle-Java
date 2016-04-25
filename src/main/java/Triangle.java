@@ -24,6 +24,6 @@ public class Triangle {
     return (mSide1 == mSide2 && mSide2 == mSide3);
   }
   public boolean isIsosceles() {
-    return ((mSide1 == mSide2) || (mSide1 == mSide3) || (mSide2 == mSide3) );
+    return (((mSide1 == mSide2) && (mSide1 != mSide3))|| ((mSide2 == mSide3) && (mSide2 != mSide1)) || ((mSide1 == mSide3) && (mSide1 != mSide2)) );
   }
 }
