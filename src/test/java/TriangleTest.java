@@ -28,4 +28,9 @@ public class TriangleTest {
     Triangle testTriangle = new Triangle(1, 1, 10);
     assertEquals(false, testTriangle.isTriangle());
   }
+  @Test
+  public void isEquilateral_whenAllSidesAreEqual_true() {
+    Triangle testTriangle = new Triangle(2, 2, 2);
+    assertEquals(true, testTriangle.isEquilateral());
+  }
 }
