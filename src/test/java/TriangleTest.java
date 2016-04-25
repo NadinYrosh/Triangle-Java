@@ -38,4 +38,9 @@ public class TriangleTest {
     Triangle testTriangle = new Triangle(2, 2, 3);
     assertEquals(true, testTriangle.isIsosceles());
   }
+  @Test
+  public void isScalene_whenAllSidesAreNotEqual_true() {
+    Triangle testTriangle = new Triangle (2, 3, 4);
+    assertEquals(true, testTriangle.isScalene());
+  }
 }
