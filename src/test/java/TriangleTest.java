@@ -23,4 +23,9 @@ public class TriangleTest {
     Triangle testTriangle = new Triangle(2, 4, 3);
     assertEquals(3, testTriangle.getSide3());
   }
+  @Test
+  public void isTriangle_whenNotATriangle_false() {
+    Triangle testTriangle = new Triangle(1, 1, 10);
+    assertEquals(false, testTriangle.isTriangle());
+  }
 }

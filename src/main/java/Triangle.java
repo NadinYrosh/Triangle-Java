@@ -14,9 +14,13 @@ public class Triangle {
   public int getSide2(){
     return mSide2;
   }
-
   public int getSide3(){
     return mSide3;
   }
+
+  public boolean isTriangle(){
+    return ((mSide1 + mSide2 > mSide3) && (mSide2 + mSide3 > mSide1) && (mSide1 + mSide3 > mSide2));
+  }
+
 
 }
