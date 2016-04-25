@@ -27,6 +27,18 @@ public class App {
       Triangle myTriangle = new Triangle(inputtedSide1, inputtedSide2, inputtedSide3);
       model.put("myTriangle", myTriangle);
 
+      if (myTriangle.isTriangle()) {
+        if (myTriangle.isEquilateral()) {
+          model.put("myTriangleType", "Equilateral");
+        } else if (myTriangle.isIsosceles()) {
+          model.put("myTriangleType", "Isosceles");
+        } else {
+          model.put("myTriangleType", "Scalene");
+        }
+      } else {
+        model.put("myTriangle", "not a Triangle");
+      }
+
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
   }
